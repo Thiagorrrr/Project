@@ -1,0 +1,15 @@
+@import "../apps/mixins.scss";
+@import "../apps/header.scss";
+@import "../apps/app.scss";
+@import "../apps/notfound.scss";
+@import "../apps/cards.scss";
+@import "../apps/footer.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  min-width: rem(280);
+}
+

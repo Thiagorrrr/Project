@@ -1,0 +1,31 @@
+@import "../apps/navHeaderList.scss";
+
+.header_static {
+  &.show {
+    display: block;
+    content: '';
+    height: rem(62);
+  }
+  .header {
+    text-align: center;
+    background: $color__ice;
+    &.show {
+      position: fixed;
+      z-index: 1;
+      width: 100%;
+    }
+    h1 {
+      display: none;
+    }
+  }
+}
+
+@media screen and(min-width: 1366px) {
+  .header_static {
+    &.show {
+      display: block;
+      content: '';
+      height: rem(140);
+    }
+  }
+}

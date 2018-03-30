@@ -1,0 +1,28 @@
+.content__not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: rem(50);
+  height: rem(380);
+  span {
+    color: $color__blue-light;
+    font-size: rem(26);
+    &.content__title {
+      display: block;
+      font-size: rem(70);
+      padding-bottom: rem(20);
+    }
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  .content__not-found {
+    height: rem(768);
+  }
+}
+
+@media screen and(min-width: 1366px) {
+  .content__not-found {
+    height: rem(900);
+  }
+}

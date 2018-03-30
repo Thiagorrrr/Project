@@ -1,0 +1,7 @@
+/build/
+/config/
+/dist/
+/react-starter/
+/*.js
+/test/unit/coverage/
+*

@@ -1,0 +1,119 @@
+@import './navigation';
+
+.header__menu__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: rem(15);
+
+  .header__menu__wrapper-svgs {
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    width:100%;
+  }
+  .svg {
+    z-index: 1;
+    width: rem(25);
+  }
+  .svgSearch {
+    width: rem(25);
+    z-index: 1;
+    &.true {
+      position: relative;
+      &:after {
+        position: absolute;
+        content: "X";
+        border-radius:  100%;
+        background: $color__white;
+        font-size: rem(20);
+        display: flex;
+        height: rem(40);
+        width: rem(40);
+        top: rem(-5);
+        right: rem(-5);
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+  .svgWeb {
+    width: rem(150);
+  }
+}
+
+.listMovel {
+  transition: all ease-in-out 300ms;
+  background: $color__black-light;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  opacity: 0;
+  transform: translateX(0%);
+  top: 0;
+  &.true {
+    opacity: 4;
+    width: 100%;
+    transition: all ease-in-out 300ms;
+    .listMovel__content {
+      transition: all ease-in-out 300ms;
+      transform: translateX(0);
+    }
+  }
+  .listMovel__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background: $color__ice;
+    font-size: rem(24);
+    right: rem(10);
+    top: rem(10);
+    width: rem(50);
+    height: rem(50);
+    border-radius: 100%;
+    z-index: 4;
+  }
+  .listMovel__content {
+    background: $color__white;
+    height: 100%;
+    width: 75%;
+    position: fixed;
+    transform: translateX(-100%);
+    overflow: hidden;
+  }
+}
+@media screen and(min-width: 1024px) {
+  .header__menu__wrapper {
+    justify-content: flex-end;
+    width: 90%;
+    clear: both;
+    margin: 0 auto;
+  }
+}
+@media screen and(min-width: 1366px) {
+  .header__menu__wrapper {
+    width: 70%;
+    position: relative;
+    .header__menu__wrapper-svgs {
+      width: 60%
+    }
+    .svg {
+      display: none;
+    }
+    .svgSearch {
+      width: rem(25);
+      z-index: 1;
+      &.true {
+        position: relative;
+        &:after {
+          display: none;
+        }
+      }
+    }
+    .svgWeb {
+      width: rem(250);
+      margin: 0 auto;
+    }
+  }
+}

@@ -1,0 +1,105 @@
+.cards__information {
+  position: relative;
+  background: $color__white;
+  border-radius: rem(5);
+  overflow: hidden;
+  margin-bottom: rem(30);
+  &:last-child {
+    margin-bottom: rem(0);
+  }
+  .content__image {
+    overflow: hidden;
+    background: $color__gray;
+    border-radius: rem(5) rem(5) rem(0) rem(0);
+    height: rem(200);
+
+    img {
+      width: auto;
+      height: 100%;
+      border-radius: rem(5) rem(5) rem(0) rem(0);
+    }
+  }
+  .cards__information-click {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+  }
+  .cards__information-wrapper-text {
+    padding: rem(15) rem(20);
+    .cards__information-title {
+      font-size: rem(22);
+      color: $color__blue-light;
+      padding-bottom: rem(10);
+    }
+
+    .cards__information-description,
+    .cards__information-wrapper-date {
+      font-size: rem(14);
+      color: $color__gray-light;
+      font-weight: 400;
+    }
+
+    .cards__information-outhor {
+      display: inline-block;
+      padding-top: rem(10);
+      font-size: rem(14);
+      color: $color__blue-light;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and(min-width: 1024px) {
+   .cards__information {
+    width: 47%;
+    margin: rem(40) 1.5% auto;
+    float: left;
+    box-shadow: rem(0) rem(15) rem(20) rem(0)  rgba(0, 0, 0, 0.1);
+    .content__image {
+      height: rem(250);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &.item__0,
+    &.item__1 {
+      margin-top: 0;
+    }
+    &.item__2,
+    &.item__3,
+    &.item__4 {
+      width: 30%;
+      .content__image {
+        height: rem(200);
+      }
+      .cards__information-wrapper-text {
+       height: rem(320);
+     }
+    }
+    .cards__information-wrapper-text {
+       height: rem(220);
+       .cards__information-title {
+        padding-top: rem(10);
+      }
+    }
+  }
+}
+@media screen and(min-width: 1366px) {
+  .cards__information {
+    width: 47%;
+    .content__image {
+      height: rem(400);
+    }
+    &.item__2,
+    &.item__3,
+    &.item__4 {
+      .content__image {
+        height: rem(250);
+      }
+    }
+    .cards__information-wrapper-text {
+       height: rem(220);
+    }
+  }
+}

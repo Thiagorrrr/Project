@@ -1,0 +1,23 @@
+.footer {
+  .footer__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(10) rem(0);
+    svg {
+      width: rem(180);
+      height: rem(40);
+    }
+  }
+}
+
+@media screen and(min-width: 1366px) {
+  .footer {
+    clear: both;
+    .footer__logo {
+      svg {
+        height: rem(80)
+      }
+    }
+  }
+}
