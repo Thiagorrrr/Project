@@ -8,6 +8,9 @@
     margin-bottom: rem(0);
   }
   .content__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
     background: $color__gray;
     border-radius: rem(5) rem(5) rem(0) rem(0);
