@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Menu, Web, Search} from '../svgs/svgs'
 import Navigation from '../atoms/Navigation'
 import SearchInput, {createFilter} from 'react-search-input'
+
 class NavHeaderList extends Component {
   constructor() {
     super();
